@@ -48,7 +48,8 @@ public class RedisConfig {
         final JedisClientConfiguration jedisClient = JedisClientConfiguration
                     .builder()
                     .build();
-        final JedisConnectionFactory jedisFac = new JedisConnectionFactory();
+        //JedisConnectionFactory takes in config, jedisClient object, if not, only first page loads.
+        final JedisConnectionFactory jedisFac = new JedisConnectionFactory(config, jedisClient);
         jedisFac.afterPropertiesSet();
         RedisTemplate<String, Object> redisTemplate 
                 = new RedisTemplate<String, Object>();

@@ -14,7 +14,8 @@
 	<name>day14</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>19</java.version>
+		<!-- make sure java version set to 17 to use railway-->
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
